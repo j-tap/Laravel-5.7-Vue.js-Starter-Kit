@@ -1,7 +1,7 @@
 import VueRouter from 'vue-router'
 import helper from './services/helper'
 
-let routes = [
+const routes = [
     {
         path: '/',
         component: require('./layouts/default-page'),
@@ -92,20 +92,20 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
 
-    if (to.matched.some(m => m.meta.requiresAuth)){
+    if (to.matched.some(m => m.meta.requiresAuth)) {
         return helper.check().then(response => {
             if(!response){
-                return next({ path : '/login'})
+                return next({path : '/login'})
             }
 
             return next()
         })
     }
 
-    if (to.matched.some(m => m.meta.requiresGuest)){
+    if (to.matched.some(m => m.meta.requiresGuest)) {
         return helper.check().then(response => {
-            if(response){
-                return next({ path : '/'})
+            if (response) {
+                return next({path : '/'})
             }
 
             return next()
@@ -113,6 +113,6 @@ router.beforeEach((to, from, next) => {
     }
 
     return next()
-});
+})
 
-export default router;
+export default router

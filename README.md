@@ -27,6 +27,7 @@ There are many Laravel+Vue.js starter kit available but none of them are complet
 * Bootstrap 4.0.0 beta
 * jQuery 3.2.0
 * Aixos 0.16.2
+* Pug 2.0
 
 ### Here are the composer packages used in this script:
 
