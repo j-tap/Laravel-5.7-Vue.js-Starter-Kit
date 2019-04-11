@@ -54,11 +54,11 @@
 						.col-sm-12.text-center
 							p
 								|Forgot your password? 
-								routerLink(to='/password' class='text-info m-l-5')
+								router-link(to='/password' class='text-info m-l-5')
 									b Reset here!
 							p
 								|Don't have an account? 
-								routerLink(to='/register' class='text-info m-l-5')
+								router-link(to='/register' class='text-info m-l-5')
 									b Sign Up
 			guestFooter
 
