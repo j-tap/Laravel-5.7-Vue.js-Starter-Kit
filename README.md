@@ -167,6 +167,8 @@ npm install
 This will again take some time depending upon your internet speed and your system configuration. Once completed, you will get "node_modules" folder as shown in the above screenshot. Please note that you need to have installed npm globally before running this command.
 Next, you need to run below command in order to get a secret App Key for your script.
 
+Rename `.env.example` in `.env`and edit database name, user, pass
+
 ``` bash
 php artisan key:generate
 ```
